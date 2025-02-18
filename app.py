@@ -9,11 +9,11 @@ import numpy as np
 app = Flask(__name__)
 
 # Load trained XGBoost model
-model_path = "xgboost_model.json"
+model_path = "/Workspace/xgboost_model.json"
 if os.path.exists(model_path):
     model = xgb.Booster()
     model.load_model(model_path)
-    print("✅ XGBoost Model loaded successfully from:", model_path)
+    print("XGBoost Model loaded successfully from:", model_path)
 else:
     model = None
     print("❌ Model could not be loaded!")
